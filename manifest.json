@@ -1,0 +1,13 @@
+{
+    "name": "Wordle",
+    "description": "Word Guesser",
+    "version": "1.2",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icons": {
+            "32": "icon.jpeg",
+            "128": "bigicon.jpeg"
+        }
+    }
+}
