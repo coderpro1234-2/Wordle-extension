@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wordle</title>
+    <meta name="viewport" content="height=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icon.png">
+    <style>
+      body {
+        background-color: rgb(18,18,19);
+
+      }
+      .buttonretry {
+        border: 2px solid rgb(83,141,78);
+        color: white;
+        background-color: rgb(83,141,78);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin-bottom: 5px;
+        font-weight: 900;
+        border-radius: 12px;
+      }
+      .buttongre {
+        width: 7.45vh;
+        height: 7.45vh;
+        border: 2px solid rgb(83,141,78);
+        color: white;
+        background-color: rgb(83,141,78);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4.5vh;
+        transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin-bottom: 5px;
+        font-weight: 900;
+      }
+      .buttonyel {
+        width: 7.45vh;
+        height: 7.45vh;
+        border: 2px solid rgb(181,159,59);
+        color: white;
+        background-color: rgb(181,159,59);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4.5vh;
+        transition-duration: 0.4s;
+        margin-bottom: 5px;
+        font-weight: 900;
+      }
+      .buttongra {
+        width: 7.45vh;
+        height: 7.45vh;
+        border: 2px solid rgb(58,58,60);
+        color: white;
+        background-color: rgb(58,58,60);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4.5vh;
+        transition-duration: 0.4s;
+        margin-bottom: 5px;
+        font-weight: 900;
+      }
+      .buttonno {
+        border: 2px solid #3a3a3c;
+        width: 7.45vh;
+        height: 7.45vh;
+        color: white;
+        background-color: rgb(18,18,19);
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4.5vh;
+        transition-duration: 0.4s;
+        margin-bottom: 5px;
+        font-weight: 900;
+      }
+      .h4 {
+        color: white;
+        font-size: 2.4vh;
+      }
+      .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .input11 {
+        height: 3.4vh;
+        width: 30vh;
+        font-size: 2.8vh;
+      }
+      .input12 {
+        height: 4.48vh;
+        width: 8.5vh;
+        font-size: 2vh;
+        text-align: center;
+      }
+      .charbutton {
+        border: 0;
+        border-radius: 5px;
+      }
+      .blankcharbutton {
+        background-color: #818384;
+      }
+      .disable-select {
+        user-select: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+    </style>
+  </head>
+  <body class="disable-select">
+    <center>
+      <button class="buttonno" id="101" disabled></button>
+      <button class="buttonno" id="102" disabled></button>
+      <button class="buttonno" id="103" disabled></button>
+      <button class="buttonno" id="104" disabled></button>
+      <button class="buttonno" id="105" disabled></button><br>
+      <button class="buttonno" id="201" disabled></button>
+      <button class="buttonno" id="202" disabled></button>
+      <button class="buttonno" id="203" disabled></button>
+      <button class="buttonno" id="204" disabled></button>
+      <button class="buttonno" id="205" disabled></button><br>
+      <button class="buttonno" id="301" disabled></button>
+      <button class="buttonno" id="302" disabled></button>
+      <button class="buttonno" id="303" disabled></button>
+      <button class="buttonno" id="304" disabled></button>
+      <button class="buttonno" id="305" disabled></button><br>
+      <button class="buttonno" id="401" disabled></button>
+      <button class="buttonno" id="402" disabled></button>
+      <button class="buttonno" id="403" disabled></button>
+      <button class="buttonno" id="404" disabled></button>
+      <button class="buttonno" id="405" disabled></button><br>
+      <button class="buttonno" id="501" disabled></button>
+      <button class="buttonno" id="502" disabled></button>
+      <button class="buttonno" id="503" disabled></button>
+      <button class="buttonno" id="504" disabled></button>
+      <button class="buttonno" id="505" disabled></button><br>
+      <button class="buttonno" id="601" disabled></button>
+      <button class="buttonno" id="602" disabled></button>
+      <button class="buttonno" id="603" disabled></button>
+      <button class="buttonno" id="604" disabled></button>
+      <button class="buttonno" id="605" disabled></button><br>
+      <h1 id="input1" style="color: white;" hidden></h1>
+      <h4 class="h4"id="h4">&#8192</h4>
+      <button id="key_q" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('q')">Q</button>
+      <button id="key_w" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('w')">W</button>
+      <button id="key_e" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('e')">E</button>
+      <button id="key_r" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('r')">R</button>
+      <button id="key_t" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('t')">T</button>
+      <button id="key_y" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('y')">Y</button>
+      <button id="key_u" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('u')">U</button>
+      <button id="key_i" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('i')">I</button>
+      <button id="key_o" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('o')">O</button>
+      <button id="key_p" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('p')">P</button><br>
+      <button id="key_a" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('a')">A</button>
+      <button id="key_s" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('s')">S</button>
+      <button id="key_d" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('d')">D</button>
+      <button id="key_f" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('f')">F</button>
+      <button id="key_g" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('g')">G</button>
+      <button id="key_h" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('h')">H</button>
+      <button id="key_j" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('j')">J</button>
+      <button id="key_k" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('k')">K</button>
+      <button id="key_l" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('l')">L</button><br>
+      <button class="buttonno charbutton blankcharbutton" style="width: 8vh; height: 4.5vh; font-size: 2vh;" onclick="addword()">Enter</button>
+      <button id="key_z" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('z')">Z</button>
+      <button id="key_x" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('x')">X</button>
+      <button id="key_c" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('c')">C</button>
+      <button id="key_v" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('v')">V</button>
+      <button id="key_b" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('b')">B</button>
+      <button id="key_n" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('n')">N</button>
+      <button id="key_m" class="buttonno charbutton blankcharbutton" style="width: 4vh; height: 4vh; font-size: 2vh;" onclick="addletter('m')">M</button>
+      <button class="buttonno charbutton blankcharbutton" style="width: 8vh; height: 4vh; font-size: 2vh;" onclick="backspace()">Back</button>
+    </center>
+  </body>
+  <script src="main.js"></script>
+</html>
